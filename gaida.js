@@ -15,11 +15,11 @@ Object.keys(notes).forEach((key, i) => {
     })
 });
 
-$('button').on('mousedown', (event) => {
+$('button').on('touchstart', (event) => {
     var id = $(event.target).attr('id');
     notes[id].sound.play();
 });
-$('button').on('mouseup', (event) => {
+$('button').on('touchend', (event) => {
     var id = $(event.target).attr('id');
     notes[id].sound.fade(1, 0, 500);
 })
